@@ -1,22 +1,8 @@
-html{
-	height: 100%;
-}
 body {
   padding-top: 54px;
-  height: 100%;
 }
 /* custom styling */
-.wrapper{
-	min-height: 100%;
-	position: relative;
-}
-.content{
-	padding-bottom: 60px;
-}
-.footer{
-	position: absolute;
-	bottom: 0;
-}
+
 @media (min-width: 992px) {
   body {
     padding-top: 56px;

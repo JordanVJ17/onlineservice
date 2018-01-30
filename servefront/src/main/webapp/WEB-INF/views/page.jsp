@@ -38,11 +38,11 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
 		<!-- Page Content -->
-		<div class="content">
+		
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
 			</c:if>
@@ -54,9 +54,13 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			<!-- Load only when user clicks contacts -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
 
 			<!-- /.container -->
-		</div>
+		
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
@@ -66,7 +70,7 @@
 
 		<!-- Self Coded JS file -->
 		<script src="${js}/myapp.js"></script>
-	</div>
+	
 </body>
 
 </html>
